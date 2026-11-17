@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.18" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.18" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.18" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.18" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.22.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.22.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.22.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OAuth.Contracts\OAuth.Contracts.csproj" />
+    <ProjectReference Include="..\SecureStorage\SecureStorage.csproj" />
+    <PackageReference Include="XmlTypedSettings" Version="0.1.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageId>HttpConnection</PackageId>
+    <Version>0.1.1</Version>
+    <IsPackable>true</IsPackable>
+    <Description>Windows HTTP clients with proxy configuration and optional OAuth authentication.</Description>
+    <PackageReadmeFile>PACKAGE.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="Docs\PACKAGE.md" Pack="true" PackagePath="PACKAGE.md" />
+  </ItemGroup>
+</Project>
